@@ -6,7 +6,7 @@ import pymorphy2
 import sqlalchemy
 from deeppavlov import configs, build_model
 
-ner_model = build_model(configs.classifiers.paraphraser_bert, download=False, )
+ner_model = build_model(configs.classifiers.paraphraser_rubert, download=True, )
 
 news_lite_engine = 'sqlite:///../Paraphrase_gen/rus_news.db'
 news_lite_engine = sqlalchemy.create_engine(news_lite_engine)
